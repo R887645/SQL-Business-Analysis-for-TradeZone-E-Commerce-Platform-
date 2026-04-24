@@ -53,7 +53,7 @@ These three questions shaped the entire analysis. Everything else, payment metho
 
 ### Why these metrics?
 
-Most e-commerce analyses go straight to total revenue and top products. I deliberately started from the **customer level** (Query 5 — spend segmentation) before touching product or seller data. My reasoning: if the customer base is structurally fragile, every other metric needs to be interpreted through that lens.
+Most e-commerce analyses go straight to total revenue and top products. I deliberately started from the **customer level** (Query 5: spend segmentation) before touching product or seller data. My reasoning: if the customer base is structurally fragile, every other metric needs to be interpreted through that lens.
 
 The 30-day conversion rate (Query 1) was chosen because it is the most honest signal of whether acquisition spend is actually working. A sign-up without a purchase is a cost, not a result.
 
@@ -61,7 +61,7 @@ Query 7 (ratings vs revenue) was chosen because it tests whether customers are b
 
 ### Why these three findings over the others?
 
-I ran eight queries. I could have led with quarterly revenue growth (Q4 2024 grew 326% vs Q4 2023) — that looks impressive. But impressive growth built on a fragile customer base is a risk, not a win. I chose the three findings that together told a coherent story:
+I ran eight queries. I could have led with quarterly revenue growth (Q4 2024 grew 326% vs Q4 2023), that looks impressive. But impressive growth built on a fragile customer base is a risk, not a win. I chose the three findings that together told a coherent story:
 
 1. **Revenue concentration** → the risk
 2. **Conversion failure** → the pipeline problem feeding that risk
