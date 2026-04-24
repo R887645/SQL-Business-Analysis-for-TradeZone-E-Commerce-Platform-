@@ -1,6 +1,7 @@
 # 🛒 TradeZone E-Commerce Platform: SQL Business Analysis
 
 > **A full-cycle data analyst project:** data cleaning, business SQL, and an executive memo for a fast-growing Nigerian e-commerce platform.
+![My Image Description](https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/ecommerce%20(2).png?raw=true)
 
 ---
 
