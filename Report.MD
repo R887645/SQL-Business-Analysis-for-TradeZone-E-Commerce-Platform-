@@ -1,4 +1,4 @@
-# 🛒 TradeZone E-Commerce Platform — SQL Business Analysis
+# 🛒 TradeZone E-Commerce Platform: SQL Business Analysis
 
 > **A full-cycle data analyst project:** data cleaning, business SQL, and an executive memo for a fast-growing Nigerian e-commerce platform.
 
@@ -28,7 +28,7 @@ This project simulates the work of a data analyst embedded in the data team at *
 My job was to:
 1. **Clean the raw dataset** and document every decision
 2. **Answer eight business questions** using PostgreSQL
-3. **Deliver an analyst memo** translating query results into decisions leadership can act on
+3. **Deliver an analyst memo** translating query results into decisions that leadership can act on
 
 This is not a tutorial project. Every query, every decision, and every recommendation is tied to a real business question the Head of Growth and Head of Seller Operations needed answered before the 2025 planning cycle.
 
@@ -101,6 +101,8 @@ Before writing a single analysis query, the dataset was fully cleaned. Key issue
 | `payments` | `amount` | 155 | Filled from matching `orders.total_amount`; 12 remain NULL (no price source exists) |
 | `orders` | `delivery_date` | 1,510 | Retained — only Delivered orders should have a date; all NULLs belong to Cancelled/Shipped/Pending orders |
 
+![My Image Description](https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/dATA%20CLEANING_Tradezone.png?raw=true)
+
 ### Duplicates
 Checked across `customers`, `sellers`, and `orders`. **No duplicate records found.**
 
@@ -113,6 +115,8 @@ Checked across `customers`, `sellers`, and `orders`. **No duplicate records foun
 - **5 review ratings** found outside the valid 1–5 range and flagged
 - **No negative product prices** found
 - **No discount column** exists in this dataset — not applicable
+
+![My Image Description](https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/Screenshot%202026-04-24%20172031.png?raw=true)
 
 ---
 
@@ -168,10 +172,14 @@ LIMIT 5;
 
 **Result:** Fastest fulfilment: **RunFast NG** at 91.20 hours average. However, RunFast holds only a 3.25 customer rating despite being the quickest — showing that speed alone does not drive satisfaction. **SportsCentral NG** combined competitive speed (98.40 hrs) with a 4.08 rating.
 
+![My Image Description](https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/q3_tRADEZONE.png?raw=true)
+
 ---
 
 ### Q4 — Quarterly Revenue Trends
 *Compare quarterly revenue across 2023 and 2024. Identify the strongest growth quarter.*
+
+![My Image Description](https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/q4_tradezone.png?raw=true)
 
 **Result:**
 | Quarter | Revenue 2023 | Revenue 2024 | Growth | Growth % |
