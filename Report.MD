@@ -36,7 +36,7 @@ This is not a tutorial project. Every query, every decision, and every recommend
 
 ## Business Problem
 
-> *"The platform has grown quickly but that growth is masking some serious operational problems. Customer retention is dropping. Some sellers are dragging down overall platform ratings. Certain product categories are underperforming despite heavy promotion spend."*
+> *"The platform has grown quickly, but that growth is masking some serious operational problems. Customer retention is dropping. Some sellers are dragging down overall platform ratings. Certain product categories are underperforming despite heavy promotion spend."*
 
 When I read this brief, three questions jumped out immediately:
 
@@ -44,7 +44,7 @@ When I read this brief, three questions jumped out immediately:
 - **Are new customers activating?** Sign-up numbers mean nothing if customers never buy.
 - **Is the product catalogue working?** High revenue from poorly rated products is a retention time bomb.
 
-These three questions shaped the entire analysis. Everything else — payment methods, seller fulfilment, quarterly trends — provided supporting context.
+These three questions shaped the entire analysis. Everything else, payment methods, seller fulfilment, and quarterly trends — provided supporting context.
 
 ---
 
@@ -122,7 +122,7 @@ Checked across `customers`, `sellers`, and `orders`. **No duplicate records foun
 
 ## Part B: Business Questions & SQL
 
-### Q1 — Customer Acquisition & 30-Day Conversion
+### Q1: Customer Acquisition & 30-Day Conversion
 *Find the top 5 states by new sign-ups in 2024 and calculate the percentage who made at least one purchase within 30 days of signing up.*
 
 ```sql
@@ -160,14 +160,16 @@ LIMIT 5;
 
 ---
 
-### Q2 — Product Performance
+### Q2: Product Performance
 *Top 10 products by total revenue in 2024.*
 
 **Result:** All top 10 products were Electronics. HP Pavilion 15 Laptop led with ₦26.7M in revenue across 25 orders. The top 10 ranged from ₦17.7M to ₦26.7M, reflecting strong demand for tech hardware and accessories.
 
+![my image}(https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/Q2_Tradezone.png?raw=true)
+
 ---
 
-### Q3 — Seller Fulfilment Efficiency
+### Q3: Seller Fulfilment Efficiency
 *Top 20 fastest sellers by average fulfilment hours, among those with at least 20 completed orders.*
 
 **Result:** Fastest fulfilment: **RunFast NG** at 91.20 hours average. However, RunFast holds only a 3.25 customer rating despite being the quickest — showing that speed alone does not drive satisfaction. **SportsCentral NG** combined competitive speed (98.40 hrs) with a 4.08 rating.
@@ -193,8 +195,10 @@ LIMIT 5;
 
 ---
 
-### Q5 — Customer Spend Segmentation
-*Segment 2024 customers into High, Medium and Low Spenders.*
+### Q5: Customer Spend Segmentation
+*Segment 2024 customers into High, Medium, and Low Spenders.*
+
+![My Image description](https://github.com/R887645/SQL-Business-Analysis-for-TradeZone-E-Commerce-Platform-/blob/main/q5_tradezone.png?raw=true)
 
 **Result:**
 | Segment | Customers | Avg Spend | Total Revenue |
@@ -207,14 +211,14 @@ High Spenders account for **99.6% of all 2024 revenue.**
 
 ---
 
-### Q6 — Payment Method Preferences by State
+### Q6: Payment Method Preferences by State
 *Transaction count and total amount per payment method, per state.*
 
 **Result:** Card dominates in Lagos (371 transactions) and Rivers. Mobile Money leads in Kano. Cash on Delivery leads in Oyo. Urban states favour digital payments; others still rely on traditional methods.
 
 ---
 
-### Q7 — Review Ratings and Sales Performance
+### Q7: Review Ratings and Sales Performance
 *Group products by average rating. Calculate product count, total revenue and average unit price per group.*
 
 **Result:**
@@ -237,36 +241,36 @@ Mid-Rated products outsell High-Rated products by approximately ₦550 million.
 
 ## Part C: Key Insights
 
-### Insight 1 — Revenue Is Dangerously Concentrated in 603 Customers
+### Insight 1: Revenue Is Dangerously Concentrated in 603 Customers
 *(Source: Query 5)*
 
-603 High Spenders generated ₦866.5M — 99.6% of all 2024 revenue — at an average of ₦1,436,927 per customer. The remaining 74 customers contributed less than ₦3M combined. If just 10% of High Spenders churned in 2025, the platform would lose approximately **₦86.6 million overnight** with no realistic buffer from lower segments.
+603 High Spenders generated ₦866.5M, 99.6% of all 2024 revenue — at an average of ₦1,436,927 per customer. The remaining 74 customers contributed less than ₦3M combined. If just 10% of High Spenders churned in 2025, the platform would lose approximately **₦86.6 million overnight** with no realistic buffer from lower segments.
 
 This is not a tiered customer base. It is a single segment holding up the entire platform.
 
-### Insight 2 — More Than Half of New Customers Are Not Converting Within 30 Days
+### Insight 2: More Than Half of New Customers Are Not Converting Within 30 Days
 *(Source: Query 1)*
 
-Lagos, the top acquisition state, converted only 49.32% of new sign-ups within 30 days. Kano converted just 31.03%. Across all five states, the platform is losing between half and seven-in-ten new customers before they ever transact. Every unactivated customer is a lost relationship — and the pipeline for growing the high-spend segment is leaking at the very first step.
+Lagos, the top acquisition state, converted only 49.32% of new sign-ups within 30 days. Kano converted just 31.03%. Across all five states, the platform is losing between half and seven-in-ten new customers before they ever transact. Every unactivated customer is a lost relationship, and the pipeline for growing the high-spend segment is leaking at the very first step.
 
-### Insight 3 — Mid-Rated Products Outsell High-Rated Products by ₦550 Million
+### Insight 3: Mid-Rated Products Outsell High-Rated Products by ₦550 Million
 *(Source: Query 7)*
 
-Products rated 3.0–3.99 generated ₦1.69B in revenue vs ₦1.14B for products rated 4.0 and above. Customers are buying based on price, availability, or promotions — not satisfaction. For a platform already facing dropping retention, this pattern will compound: customers who are only moderately happy with their purchases will not come back.
+Products rated 3.0–3.99 generated ₦1.69B in revenue vs ₦1.14B for products rated 4.0 and above. Customers are buying based on price, availability, or promotions, not satisfaction. For a platform already facing dropping retention, this pattern will compound: customers who are only moderately happy with their purchases will not come back.
 
 ---
 
 ## Recommendations
 
-### Recommendation 1 — Launch a High-Spender Retention Programme
+### Recommendation 1: Launch a High-Spender Retention Programme
 **Owner:** Head of Growth — CRM Sub-team
 **Action:** Design and deploy a dedicated retention programme for the 603 High Spenders within 30 days. This should include personalised communication, loyalty incentives, priority customer service, and purchase-behaviour-based offers.
 **Expected outcome (60–90 days):** Measurable improvement in repeat purchase rate among High Spenders and a reduction in churn within this segment. Protecting even 10% of at-risk high spenders shields approximately ₦86.6M in revenue.
 **Traceable to:** Query 5
 
-### Recommendation 2 — Implement a 30-Day New Customer Activation Campaign
+### Recommendation 2: Implement a 30-Day New Customer Activation Campaign
 **Owner:** Head of Growth — Acquisition & Onboarding Sub-team
-**Action:** Introduce a structured onboarding sequence for all new sign-ups triggered at registration — including a time-limited first-purchase incentive (e.g. delivery waiver valid for 14 days), curated product recommendations by state, and at least two follow-up touchpoints within the 30-day window.
+**Action:** Introduce a structured onboarding sequence for all new sign-ups triggered at registration, including a time-limited first-purchase incentive (e.g., delivery waiver valid for 14 days), curated product recommendations by state, and at least two follow-up touchpoints within the 30-day window.
 **Expected outcome (60–90 days):** Lift the average 30-day conversion rate from the current 31–49% range to above 55% across all five top states. Improved activation directly grows the pipeline toward medium and high-spend tiers.
 **Traceable to:** Query 1
 
@@ -283,7 +287,7 @@ To answer this, the data team would need:
 - Seller commission or platform fee structure per transaction
 - Fulfilment and logistics cost per order, by state
 
-With these inputs, net profit per product, per seller, and per customer segment could all be calculated — giving leadership a complete picture before committing 2025 budget to any category or incentive programme.
+With these inputs, net profit per product, per seller, and per customer segment could all be calculated, giving leadership a complete picture before committing the 2025 budget to any category or incentive programme.
 
 ---
 
@@ -343,7 +347,7 @@ Or open any `.sql` file directly in pgAdmin and execute.
 
 ## Key Takeaways
 
-If I were hired as a full-time analyst at TradeZone today, the first thing I would do is protect the 603 high-value customers who are holding up the entire revenue structure — before touching any growth or acquisition budget. Growth metrics look strong on the surface. The data underneath tells a more urgent story.
+If I were hired as a full-time analyst at TradeZone today, the first thing I would do is protect the 603 high-value customers who are holding up the entire revenue structure, before touching any growth or acquisition budget. Growth metrics look strong on the surface. The data underneath tells a more urgent story.
 
 ---
 
