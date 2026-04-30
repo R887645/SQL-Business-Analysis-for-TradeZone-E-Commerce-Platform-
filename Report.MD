@@ -270,7 +270,7 @@ Products rated 3.0–3.99 generated ₦1.69B in revenue vs ₦1.14B for products
 **Traceable to:** Query 5
 
 ### Recommendation 2: Implement a 30-Day New Customer Activation Campaign
-**Owner:** Head of Growth — Acquisition & Onboarding Sub-team
+**Owner:** Head of Growth:Acquisition & Onboarding Sub-team
 **Action:** Introduce a structured onboarding sequence for all new sign-ups triggered at registration, including a time-limited first-purchase incentive (e.g., delivery waiver valid for 14 days), curated product recommendations by state, and at least two follow-up touchpoints within the 30-day window.
 **Expected outcome (60–90 days):** Lift the average 30-day conversion rate from the current 31–49% range to above 55% across all five top states. Improved activation directly grows the pipeline toward medium and high-spend tiers.
 **Traceable to:** Query 1
@@ -352,4 +352,4 @@ If I were hired as a full-time analyst at TradeZone today, the first thing I wou
 
 ---
 
-*Project completed as part of HNG Internship Stage 2 — Data Analytics Track.*
+*Project completed as part of HNG Internship Stage 2: Data Analytics Track.*
